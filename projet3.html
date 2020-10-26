@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://use.fontawesome.com/b8f17f71ef.js"></script>
+    <link rel="stylesheet" href = "projet3.css"/>
+	<title>Location de vélo Nancy</title>	
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" /><link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+</head>
+<body>
+    <h1>Réservez votre vélo à Nancy </h1>
+    <div id = "slider">
+        
+         <div class= "slide">  
+            <img src="img/OH1GMN0.jpg" alt="vélo">
+            <div class="content">
+               <p class="description" id = "fonctionnement">Fonctionnement de l'application </p>
+            </div>
+         </div>
+         <div class= "slide">  
+            <img  src="img/carte.PNG" alt="carte-map">
+            <div class="content">
+               <h2 class="titre">Première action</h2>
+               <p class="description">Vous choisissez une station et vous cliquez sur le marqueur qui correspond.</p>
+            </div>
+        </div>
+         <div class= "slide">  
+            <img  src="img/form.PNG" alt="formulaire">
+            <div class="content">
+               <h2 class="titre">Deuxième action</h2>
+               <p class="description">Un panneau s'affiche à coté de la carte. Si la station est ouverte et s'il y a des vélos disponibles vous remplissez le formulaire et vous cliquez sur réserver. Vous signez dans le champ et vous validez.</p>
+            </div>
+         </div>
+         <div class= "slide">  
+            <img  src="img/si.PNG" alt="confirmation-réservation"  id = 's'>
+            <div class="content" id= "id_derniere_action">
+               <h2 class="titre">Votre vélo est réservé !!</h2>
+               <p class="description">Un panneau s'affiche avec les informations de votre réservation et le temps qui reste avant son expiration. Cliquez sur annuler pour mettre fin à votre réservation.</p>
+            </div>
+        </div>
+    </div>
+    <div class ="container">
+         <i id ="prev" class="fa fa-angle-left" aria-hidden="true"></i>
+         <i id ="pause" class="fa fa-pause" aria-hidden="true"></i>
+         <i id ="play" class="fa fa-play-circle" aria-hidden="true"></i>
+         <i id="next" class="fa fa-angle-right" aria-hidden="true"></i>
+    </div>
+
+    <div id = "carte">
+        <div id="macarte">
+            <p id = "choix">Choisissez une station</p> 
+        </div>
+        <div id = "infos">
+            <h2>Détails de la station</h2>
+            <div id="infoStation">
+                <div id = "nomSta"></div>
+                <div id = "address"></div>
+                <div id = "places"></div>
+                <div id = "velo"></div>
+                <div id = "status"></div>
+            </div>
+            <form name = "form" id = "form" action="#">
+                <p> 
+                    <label for="nom">Votre nom :</label>
+                    <input type="text" name="nom" id = "nom" /></p>
+                <p>
+                    <label for="prenom">Votre prénom :</label>
+                    <input type="text" name="prenom" id = "prenom" />
+                </p>
+                <input id="reserve" type="submit" value="réserver"/>
+                <div id = "alert2">Remplissez les champs s'il vous plait</div>
+            </form>
+            <div id="paint">
+                <div>
+                    <canvas id="canvas"> </canvas>
+                </div>
+                <div id = "alert">Signez s'il vous plait</div>
+                <button id ="valider">Valider</button>
+                <button id ="clear">Effacer la signature</button>
+            </div>
+        </div>
+    </div>
+    <div id="confirm">
+       <div id = "textres"></div>
+       <div id = "compte"></div> 
+    </div>
+   <div id = 'expiration'>Votre réservation est expirée !</div> 
+   <div id = 'annulation'>Réservation annulée</div>
+   <button id = "annuler">Annuler la réservation</button>
+       <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+       <script src="Slider.js"></script>
+       <script src="Carte.js"></script>
+       <script src="Canvas.js"></script>
+       <script src="Reservation.js"></script>
+       <script src="Main.js"></script>
+    
+</body>
+    
+</html>

@@ -1,0 +1,368 @@
+body{
+  background-color: #232020;
+    opacity: inherit;
+   overflow-x: hidden; 
+    font-size: 18px;
+}
+#macarte{ 
+    border: 5px solid  #FF7315;
+    box-shadow: inset 0 0 1em  #FF7315, 0 0 3em  #FF7315;
+    width: 90%; height: 500px;
+    text-align: center;
+    margin: auto;
+    border-radius: 10px;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.content{
+    position: relative;
+    z-index: 15;
+    bottom: 70%;
+    background-color: #3A3535;
+    width: 400px;
+    margin-left: 50px;
+    padding: 10px;
+    opacity: 0.9;
+    border-radius: 10px;
+    color: #F4F4F4;
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+#s{
+    height: 130px!important;
+    text-align: center;
+    margin: auto;
+    margin-top: 190px!important;
+}
+#id_derniere_action{
+    bottom: 190px!important;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 5%;
+  }
+}
+h1{
+    text-align: center;
+    margin: auto;
+   font-size: 50px!important;
+    color: #FF7315;
+    margin-bottom: 30px!important;
+}
+h2{
+    font-size: 25px;
+    margin: auto;
+    text-align: center;
+    color: #FF7315; 
+}
+#slider{
+    height: 450px;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    box-shadow: inset 0 0 1em #FF7315, 0 0 2em #FF7315;    
+}
+#fonctionnement{
+    font-size: 25px;
+    color: #FF7315;
+    font-weight: bold;
+    box-shadow: inset 0 0 1em #FF7315, 0 0 2em #FF7315; 
+}
+.container #pause, .container #play {
+    position: relative;
+    text-align: center;
+    margin: auto;
+    bottom: 150px;
+    font-size: 50px;
+    cursor: pointer;
+}
+.container i{
+    color: #FF7315;
+}
+.container i:hover{
+    font-size: 130%;
+}
+.container #next{
+    position : relative;
+    z-index: 99;
+    bottom: 450px;
+    font-size: 100px;
+    left: 92%;
+}
+.container #prev{
+    top: -10%;
+    position : relative;
+    z-index: 99;
+    left: 5%;
+    text-align: center;
+    margin: auto;
+    bottom: 300px;
+    font-size: 100px;
+}
+.slide{
+    border: 5px solid #FF7315;
+    border-radius: 10px;
+     height: 450px;
+     display: none;
+}
+.slide img{
+    height: 450px; 
+}
+#carte{
+    display: flex;
+    margin-top: -150px;
+    align-items: stretch;
+}
+#infos{
+    border: 1px solid #FF7315;
+    background-color: #3A3535;
+    color: #F4F4F4;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+    margin-left: 50px;
+}
+#nom, #prenom{
+    border-radius: 7px;
+    border-color: #FF7315;
+    padding: 8px;
+    color: #FF7315;
+}
+ #reserve, #clear, #valider, #annuler{
+      border-radius: 7px;
+    border-color: #232020;
+    color: #232020;
+    background-color: white;
+    text-align: center!important;
+    margin: auto;
+    padding: 8px;
+}
+#annuler{
+    margin: auto;
+    text-align: center;
+    background-color: #3A3535;
+    color: #F4F4F4;
+    margin-top: 10px;
+}
+#canvas{
+    background-color: #F4F4F4;
+     cursor: pointer;
+    border: 1px solid #FF7315;
+    border-radius: 7px;
+    text-align: center;
+    margin: auto;
+}
+#paint{
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+#confirm{
+    padding: 2px;
+    font-weight: bold;
+    background-color: #3A3535;
+    margin-top: 40px!important;
+    width: 60%;
+    color: #F4F4F4;
+    border-radius: 20px;
+    text-align: center;
+    margin: auto;
+}
+#alert{
+    background-color: #232020; 
+    transition: 5s;
+    color: #FF7315;
+    font-weight: bold;
+    border-radius: 15px;
+    width: 250px;
+}
+#alert2{
+    background-color: #232020; 
+    transition: 5s;
+    color: #FF7315;
+    font-weight: bold;
+    border-radius: 15px;
+    width: 250px;
+}
+#expiration{
+    background-color: #3A3535;
+    color: #F4F4F4;
+    text-align: center;
+    margin: auto;
+}
+#annulation{
+    background-color: #3A3535;
+    color: #F4F4F4;
+    text-align: center;
+    margin: auto;
+}
+#choix{
+    font-size: 25px;
+    right: 100%;
+    top: 20px;
+    background-color: #3A3535;
+    border-radius: 50px;
+    color: #F4F4F4;
+    opacity: 0.9;
+    width: 350px;
+    padding: 10px;
+    margin: auto; text-align : center;
+    z-index: 10;
+     box-shadow: inset 0 0 1em #FF7315, 0 0 2em #FF7315;
+    position: relative;
+    animation: mymove 15s infinite;
+}
+@keyframes mymove {
+  from {left: -100%;} to {right: 100px;}
+}
+
+@media screen and (max-width: 1024px) {
+    body{ 
+        font-size: 15px!important;
+        width: 100%;
+    }
+    #slider{
+            height: 350px!important;
+    }
+    .slide, .slide img{
+           height: 350px!important; 
+    }
+    #macarte{
+           height: 350px!important; 
+    }
+    .content{
+       width: 50%;    
+    }
+    .container #next{
+        position : relative;
+        bottom: 330px;
+        font-size: 80px;
+        left: 92%;
+    }
+    .container #prev{
+        position : relative;
+        z-index: 99;
+        left: 4%;
+        bottom: 200px;
+        font-size: 80px;
+    }
+    h1{
+        font-size: 30px!important;
+    }
+    h2{
+        font-size: 20px!important;
+    } 
+    #carte{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    #infos{
+        margin-top: 20px!important;
+        text-align: center;
+        margin: auto;
+    }
+    #choix{
+        width: 100px;
+        animation: move 15s infinite;
+        font-size: 18px;
+    }
+    @keyframes move {
+        from {left: -100%;} to {right: 100px;}
+    }
+    #alert{
+        bottom: 40%;
+        padding: 2px;
+        font-size: 15px;
+        width: 150px;
+        left: -130px!important;
+        position: relative;
+    }
+}
+
+
+@media only screen and (max-width : 800px)
+{
+    body{
+        font-size: 12px!important;
+        width: auto;
+        margin: auto;
+        display: flex;
+        flex-direction: column!important;
+    }
+    #alert{
+        left: -800px!important;
+        position: relative;
+    }
+    .content{
+        position: relative;
+        bottom: 180px!important;
+    }
+     #s{
+        position: relative;
+        bottom: 80px!important;
+        height: 30px!important;
+    }
+    #slider{
+        height: 180px!important;
+        margin: auto;
+        text-align: center;
+    }
+    .slide, .slide img{
+           height: 180px!important; 
+    }
+    #infos{
+        width: 300px!important;
+    }
+    #canvas{
+        width: 200px!important;
+        text-align: center!important;
+        margin: auto!important;
+    }
+    .container #next{
+        position : relative;
+        bottom: 310px;
+        font-size: 50px;
+        left: 90%;
+    }
+    .container #prev{
+        position : relative;
+        left: 4%;
+        bottom: 115px;
+        font-size: 50px;
+    }
+    .container #pause, .container #play{
+        font-size: 30px!important;
+       margin-top: 120px;
+    }
+    #macarte{
+        height: 200px!important;
+    }
+    .content{
+        background-color: #3A3535;
+        width: 80%;
+        padding: 10px;
+        opacity: 0.9;
+        border-radius: 10px;
+        color: #F4F4F4;
+        animation: none;
+        text-align: center;
+        margin: auto;
+     }
+    #id_derniere_action{
+        margin-top: -30px;
+    }
+}
+
+
+
+
